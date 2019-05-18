@@ -5,6 +5,7 @@ in="test#.txt"
 out="output#.txt"
 
 template_path="/Users/harshit/Documents/CP/template.cpp"
+grader_path="/Users/harshit/Documents/CP/Algo/grader.sh"
 
 directory=$1
 number_of_test_cases=$2
@@ -19,6 +20,8 @@ chr() {
 }
 
 cd "$directory"
+
+cat "${grader_path}" > "grader.sh"
 
 for (( i=1; i<=$number_of_test_cases; i++))
 do
